@@ -38,7 +38,7 @@ function App() {
   const login = async (userData) => {
     try {
       const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
+      const URL = '/rickandmorty/login/';
       const {data} = await axios(URL + `?email=${email}&password=${password}`)
       const { access } = data;
         setAccess("DATA", data);
@@ -51,7 +51,7 @@ function App() {
   const newAccount = async (userData)=>{
     try {
       const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login';
+      const URL = '/rickandmorty/login';
       const {data} = await axios.post(URL, {email, password})
   
       if(data.message === "El email ya existe"){
@@ -80,7 +80,7 @@ function App() {
   const onSearch = async (id) => {
     try {
       if(Number.isInteger(parseInt(id)) && parseInt(id) < 827 && parseInt(id) > 0){
-      const {data} = await axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
+      const {data} = await axios.get(`/rickandmorty/character/${id}`)
         let repetidos = characters.find((char) => char.id === data.id);
         if (!repetidos) {
           setCharacters((oldChars) => [...oldChars, data]);

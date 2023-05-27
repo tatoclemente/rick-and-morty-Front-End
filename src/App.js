@@ -57,7 +57,8 @@ function App() {
       if(data.message === "El email ya existe"){
         swal("Ups! Lo siento!", "El email ya existe", "warning")
       
-      }else {
+      }
+      if(data.message === "El usuario ha sido creado correctamente"){ 
         swal("Bienvenido!", "Tu cuenta ha sido creada correctamente", "success")
         navigate(ROUTE.LOGIN)
       }

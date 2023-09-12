@@ -22,6 +22,7 @@ export default function Detail() {
       });
     return setCharacter({});
   }, [detailId]);
+  
   if (character) {
     return (
       <div className={Style.container}>

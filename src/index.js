@@ -9,7 +9,7 @@ import axios from 'axios'
 
 
 // axios.defaults.baseURL = 'http://localhost:3001'
-axios.defaults.baseURL = 'https://rick-and-morty-app-back-end-production.up.railway.app/'
+axios.defaults.baseURL = 'https://rym-db.onrender.com/'
 
 
 const rootElement = document.getElementById("root");
